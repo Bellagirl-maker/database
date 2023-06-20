@@ -48,6 +48,26 @@ CREATE TABLE invoice_items (
 
 
 
+CREATE INDEX medical_histories_patient_id
+ON medical_histories (patient_id);
+
+CREATE INDEX invoices_medical_history_id
+ON invoices (medical_history_id);
+
+CREATE INDEX medical_history_treatments_medical_history_id
+ON medical_history_treatments (medical_history_id);
+
+CREATE INDEX medical_history_treatments_treatment_id
+ON medical_history_treatments (treatment_id);
+
+CREATE INDEX invoice_items_invoice_id
+ON invoice_items (invoice_id);
+
+CREATE INDEX invoice_items_treatment_id
+ON invoice_items (treatment_id);
+
+
+
 
 
 
